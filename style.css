@@ -241,9 +241,7 @@ body {
 
 /* mobile small (320) */
 @media screen and (max-width: 320px) {
-  .main {
-    gap: 20px;
-  }
+ 
   .right-main {
     width: 100%;
     height: 50%;
