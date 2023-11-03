@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+/* main section */
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+/* left section */
+.left-main {
+  width: 40%;
+  height: 100%;
+}
+/* navbar section */
+.nav {
+  width: 100%;
+  height: 8%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+.n-1 {
+  width: 10%;
+}
+.n-1 i {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+.n-2 {
+  display: flex;
+  width: 35%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.n-2 a {
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: 550;
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+.n-2 a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #4ca8e1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.2s ease;
+}
+.n-2 a:hover {
+  color: salmon;
+}
+.n-2 a:hover::after {
+  width: 100%;
+}
+.n-2 i {
+  color: #4ca8e1;
+  font-size: 1.5rem;
+}
+.n-2 i:hover {
+  color: #111;
+}
+
+/* main content section */
+.main-content {
+  width: 100%;
+  height: 92%;
+  background-color: #fff;
+  display: flex;
+  gap: 20px;
+  padding: 150px 50px;
+  flex-direction: column;
+}
+.main-content h1 {
+  color: #111;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+}
+.main-content p {
+  color: #333;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+}
+.main-content a {
+  color: #111;
+  border: 0.5px solid #333;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 80px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  transition: color 0.2s ease;
+}
+.main-content a:hover {
+  background-color: #4ca8e1;
+  color: #fff;
+  box-shadow: 1.5px 1.5px 2px #4d4949;
+  border: none;
+}
+/* right section */
+.right-main {
+  width: 60%;
+  height: 100%;
+}
+
+/* right top section */
+#rtop {
+  width: 100%;
+  height: 45%;
+  display: flex;
+}
+
+#rtop-left {
+  width: 55%;
+  height: 100%;
+  background: url(image/naspati.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#rtop-right {
+  width: 45%;
+  height: 100%;
+  background: url(image/r1.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+/* right bottom section */
+#rbottom {
+  width: 100%;
+  height: 55%;
+  background: url(image/m2.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+/* responsive design */
+
+/* laptop small (1024) */
+@media screen and (max-width: 1024px) {
+  .nav {
+    height: 15%;
+  }
+  .main-content {
+    height: 85%;
+    padding: 100px 50px;
+  }
+  .n-2 {
+    width: 50%;
+  }
+}
+
+/* tablet (768) */
+@media screen and (max-width: 768px) {
+  .main {
+    flex-wrap: wrap;
+  }
+  .left-main {
+    width: 100%;
+    height: 70%;
+    padding-top: 20px;
+  }
+  .main-content {
+    height: 60%;
+    padding: 50px 50px;
+  }
+  .right-main {
+    width: 100%;
+    height: 85%;
+  }
+  #rtop {
+    height: 65%;
+  }
+  #rbottom {
+    height: 35%;
+  }
+}
+
+/* mobile large (425) */
+@media screen and (max-width: 425px) {
+  .left-main {
+    height: 80%;
+  }
+
+  .n-1 {
+    width: 15%;
+  }
+  .n-2 {
+    width: 50%;
+  }
+  .main-content {
+    height: 60%;
+    padding: 50px 25px 0px 25px;
+  }
+  .right-main {
+    width: 100%;
+    height: 60%;
+  }
+  #rtop {
+    height: 60%;
+  }
+  #rtop-left,
+  #rtop-right {
+    width: 50%;
+  }
+  #rbottom {
+    height: 40%;
+  }
+}
+
+/* mobile midium (375) */
+@media screen and (max-width: 375px) {
+  .n-2 {
+    width: 70%;
+  }
+  #rtop-left,
+  #rtop-right {
+    width: 50%;
+  }
+}
+
+/* mobile small (320) */
+@media screen and (max-width: 320px) {
+  .main {
+    gap: 20px;
+  }
+  .right-main {
+    width: 100%;
+    height: 50%;
+  }
+  .n-2 {
+    width: 68%;
+  }
+  #rtop {
+    height: 60%;
+  }
+  #rbottom {
+    height: 40%;
+  }
+  #rtop-left,
+  #rtop-right {
+    width: 50%;
+  }
+}
